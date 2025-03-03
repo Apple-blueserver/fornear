@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Login</h1>
+      <form id="loginForm" onsubmit="return checkLogin()">
+        <div class="textbox">
+          <input type="text" id="username" placeholder="Username" name="username" required>
+        </div>
+        <div class="textbox">
+          <input type="password" id="password" placeholder="Password" name="password" required>
+        </div>
+        <input type="submit" value="Login">
+      </form>
+      <!-- ซองจดหมาย -->
+      <div class="envelope" id="envelope" onclick="showHint()">📩</div>
+      <!-- คำใบ้ (ซ่อนตอนเริ่มต้น) -->
+      <div id="hint" class="hint">
+        คำใบ้: ให้ไปดูในไฟล์ Login.html
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ฟังก์ชันเพื่อแสดงคำใบ้เมื่อคลิกซองจดหมาย
+    function showHint() {
+      const hintElement = document.getElementById('hint');
+      hintElement.style.display = (hintElement.style.display === 'block') ? 'none' : 'block';
+    }
+
+    // ฟังก์ชันเช็คการเข้าสู่ระบบ
+    function checkLogin() {
+      // กำหนดค่าที่ถูกต้องสำหรับ Username และ Password
+      const correctUsername = 'Near';
+      const correctPassword = '200452';
+
+      // ดึงค่าที่กรอกจากฟอร์ม
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // ตรวจสอบ Username และ Password
+      if (username === correctUsername && password === correctPassword) {
+        // ถ้าถูกต้อง ให้ไปที่หน้า Main.html
+        window.location.href = 'Main.html';
+        return false; // ป้องกันไม่ให้ฟอร์มรีเฟรช
+      } else {
+        alert('Username หรือ Password ไม่ถูกต้อง!');
+        return false; // ป้องกันไม่ให้ฟอร์มรีเฟรช
+      }
+    }
+  </script>
+</body>
+</html>

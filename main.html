@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คุณเนียร์อยากได้อะไรเอ่ย?</title>
+    <style>
+        body {
+            background-color: #ffd6e0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #d70040;
+            position: relative;
+        }
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
+        }
+        .cloud-button {
+            display: inline-block;
+            width: 220px;
+            padding: 20px;
+            margin: 15px;
+            background-color: white;
+            color: #ff4d6d;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            position: relative;
+            text-align: center;
+        }
+        .cloud-button:hover {
+            background-color: #ffe6ea;
+            transform: scale(1.05);
+        }
+        .cloud-button::before {
+            content: "\2601"; /* ใช้ Unicode สำหรับก้อนเมฆ */
+            font-size: 40px;
+            position: absolute;
+            top: -25px;
+            left: 10px;
+            color: hwb(333 75% 5%);
+            z-index: -1; /* ทำให้ก้อนเมฆอยู่ด้านหลัง */
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #ff4d6d;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(255, 105, 180, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>คุณเนียร์อยากได้อะไรเอ่ย?</h1>
+        <a href="02.html" class="cloud-button">💖 บอกรัก 💖</a>
+        <a href="03.html" class="cloud-button">🎀 กำลังใจ 🎀</a>
+        <a href="Love.html" class="cloud-button">🎁 อันนี้ให้คุณเนียร์ 🎁</a>
+        <a href="yn.html" class="cloud-button">🎮 Game 🎮</a>
+
+    </div>
+    <div class="footer">Website By Nong Fha ✨</div>
+</body>
+</html>
